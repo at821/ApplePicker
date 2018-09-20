@@ -39,6 +39,15 @@ public class Basket : MonoBehaviour {
         GameObject collidedWith = coll.gameObject;
         if (collidedWith.tag == "Apple") {
             Destroy(collidedWith);
+
+            //convert the score back to a string and display it
+            scoreGT.text = scoreGT.ToString();
+
+            //track the high score
+            if (scoreGT > HighScore.score)
+            {
+                HighScore.score = score;
+            }
         }
 
         //Parse the text of the scoreGT into an int
