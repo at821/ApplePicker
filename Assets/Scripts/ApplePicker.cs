@@ -15,8 +15,7 @@ public class ApplePicker : MonoBehaviour {
 	void Start () {
         basketList = new List<GameObject>();
 
-        for (int i=0; i<numBaskets; i++)
-        {
+        for (int i=0; i<numBaskets; i++)        {
             Vector3 pos = Vector3.zero;
             pos.y = basketBottomY + (basketSpacingY * i);
             GameObject tBasketGO = Instantiate<GameObject>(basketPrefab);
@@ -44,9 +43,8 @@ public class ApplePicker : MonoBehaviour {
         basketList.RemoveAt(basketIndex);
         Destroy(tBasketGo);
 
-        if (basketList.Count == 0)
-        {
-            SceneManager.LoadScene("picked_0");
+        if (basketList.Count == 0)      {
+            SceneManager.LoadScene("_Scene_0");
         }
 
     }
