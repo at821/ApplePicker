@@ -13,7 +13,7 @@ public class Apple : MonoBehaviour {
             //get a refernce to the ApplePicker component of Main Camera
             ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
 
-            //call the public appledestroyed90 method of apScript
+            //call the public appledestroyed() method of apScript
             apScript.AppleDestroyed();
         }
     }
